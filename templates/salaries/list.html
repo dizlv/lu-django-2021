@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>List</title>
+    </head>
+
+    <body>
+        {% if salaries %}
+            <ul>
+                {% for salary_entry in salaries %}
+                    <li>{{ salary_entry.first_name }} – {{ salary_entry.amount }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </body>
+</html>
