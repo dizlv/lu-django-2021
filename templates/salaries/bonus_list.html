@@ -1,0 +1,10 @@
+{% extends "base_template.html" %}
+
+{% block body %}
+    <h1>Salary for {{ salary_entry.first_name }}</h1>
+    <ul>
+        {% for bonus in object_list %}
+            <li>{{ bonus.amount }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

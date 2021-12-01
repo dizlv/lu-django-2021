@@ -10,3 +10,15 @@ class SalaryEntry(models.Model):
         max_digits=11,
         decimal_places=4,
     )
+
+
+class Bonus(models.Model):
+    salary_entry = models.ForeignKey(
+        to=SalaryEntry,
+        on_delete=models.CASCADE,
+    )
+
+    amount = models.DecimalField(
+        max_digits=11,
+        decimal_places=4,
+    )

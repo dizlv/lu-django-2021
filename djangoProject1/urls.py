@@ -23,9 +23,12 @@ from salaries import views
 # http://<ip>:<port>/add/ - 1. get form 2. save data (GET, POST)
 
 urlpatterns = [
-    path('', views.salaries_list),
+    path('', views.salaries_list, name='salaries-list'),
     path('monthly/', views.salaries_monthly_report),
     path('add/', views.salary_add),
+    path('import/', views.import_salary_entries),
+    path('js/', views.js_view),
+    path('api/salaries/', views.SalariesAPIView.as_view()),
 
     path('admin/', admin.site.urls),
 ]

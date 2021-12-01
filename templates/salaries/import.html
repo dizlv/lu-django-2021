@@ -1,0 +1,12 @@
+{% extends "base_template.html" %}
+
+{% block title %}Import Salaries{% endblock %}
+
+{% block body %}
+    <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form }}
+
+        <input type="submit" value="Import Data">
+    </form>
+{% endblock %}

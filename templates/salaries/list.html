@@ -1,17 +1,13 @@
-<!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>List</title>
-    </head>
+{% extends "base_template.html" %}
 
-    <body>
-        {% if salaries %}
-            <ul>
-                {% for salary_entry in salaries %}
-                    <li>{{ salary_entry.first_name }} – {{ salary_entry.amount }}</li>
-                {% endfor %}
-            </ul>
-        {% endif %}
-    </body>
-</html>
+{% block title %}Salaries{% endblock %}
+
+{% block body %}
+    {% if salaries %}
+        <ul>
+            {% for salary_entry in salaries %}
+                <li>{{ salary_entry.first_name }} – {{ salary_entry.amount }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endblock %}
